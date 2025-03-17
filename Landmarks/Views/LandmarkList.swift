@@ -2,12 +2,18 @@ import SwiftUI
 
 struct LandmarkList: View {
     var body: some View {
-        List {
-            ForEach(landmarks) { landmark in
-                LandmarkRow(landmark: landmark)
+        NavigationSplitView {
+            List(landmarks) { landmark in
+                NavigationLink {
+                    LandmarkDetail()
+                } label: {
+                    LandmarkRow(landmark: landmark)
+                }
             }
+            .navigationTitle("Landmarks")
+        } detail: {
+            Text("Select a Landmark")
         }
-        .listStyle(.inset)
     }
 }
 
