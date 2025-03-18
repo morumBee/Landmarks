@@ -166,7 +166,7 @@
         "state": "Virginia",
         "id": 1011,
         "isFeatured": false,
-        "isFavorite": false,
+        "isFavorite": true,
         "park": "Chincoteague National Wildlife Refuge",
         "coordinates": {
             "longitude": -75.383212,
